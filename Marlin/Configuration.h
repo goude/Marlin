@@ -71,7 +71,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(V1 Engineering, Ryan, 414D)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(Goude - V1 Engineering, Ryan, 414D)" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -716,7 +716,10 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 200, 200, 800, 200 }
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 200, 200, 800, 200 }
+
+// Changed by /2 - these stepper drivers have only 1/16 steps according to V1 forum
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 100 }
 
 /**
  * Default Max Feed Rate (mm/s)
