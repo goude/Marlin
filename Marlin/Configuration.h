@@ -718,8 +718,8 @@
  */
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 200, 200, 800, 200 }
 
-// Changed by /2 - these stepper drivers have only 1/16 steps according to V1 forum
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 100 }
+// goude Changed by /2 - these stepper drivers have only 1/16 steps according to V1 forum
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 1600, 100 }
 
 /**
  * Default Max Feed Rate (mm/s)
