@@ -2496,6 +2496,9 @@
  */
 //#define STARTUP_COMMANDS "M17 Z"
 
+// Turn on fan at 50% duty cycle
+#define STARTUP_COMMANDS "M106 S128"
+
 /**
  * G-code Macros
  *
@@ -2518,8 +2521,8 @@
   #define USER_SCRIPT_AUDIBLE_FEEDBACK
   //#define USER_SCRIPT_RETURN  // Return to status screen after a script
 
-  #define USER_DESC_1 "Reset All Coordinates"
-  #define USER_GCODE_1 "G92 X0 Y0 Z0"
+  #define USER_DESC_1 "Reset All Coordinates (Z2)"
+  #define USER_GCODE_1 "G92 X0 Y0 Z2"
 
   #define USER_DESC_2 "Home Z Axis"
   #define USER_GCODE_2 "G28 Z"
@@ -2527,6 +2530,11 @@
   #define USER_DESC_3 "Home X&Y"
   #define USER_GCODE_3 "G28 X Y"
 
+  //#define USER_DESC_4 "M851 Z2"
+  //#define USER_GCODE_4 "M851 Z2"
+
+  //#define USER_DESC_5 "M851 Z-2"
+  //#define USER_GCODE_5 "M851 Z-2"
 //#define USER_DESC_4 "Heat Bed/Home/Level"
 //#define USER_GCODE_4 "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nG28\nG29"
 
